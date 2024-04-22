@@ -152,6 +152,7 @@ if args.model_type in ['clam_sb', 'clam_mb']:
 print('\nLoad Dataset')
 
 if args.task == 'task_1_tumor_vs_normal':
+    print(args.task) #lp added
     args.n_classes=2
     dataset = Generic_MIL_Dataset(csv_path = 'dataset_csv/tumor_vs_normal_dummy_clean.csv',
                             data_dir= os.path.join(args.data_root_dir, 'tumor_vs_normal_resnet_features'),

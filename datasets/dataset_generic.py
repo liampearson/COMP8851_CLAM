@@ -61,6 +61,13 @@ class Generic_WSI_Classification_Dataset(Dataset):
 		if not label_col:
 			label_col = 'label'
 		self.label_col = label_col
+        
+		#lp added
+		print("csv_path:",csv_path)
+		import os
+		print("\nchanging csv_path.") 
+		csv_path = "/scratch/mn91/lp2767/COMP8851_CLAM/dataset_csv/tumor_vs_normal.csv"
+		print("csv_path:",csv_path,"\n")
 
 		slide_data = pd.read_csv(csv_path)
 		slide_data = self.filter_df(slide_data, filter_dict)
